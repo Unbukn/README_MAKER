@@ -15,22 +15,26 @@ function promptUser() {
   {
     type: "input",
     name: "projectTitle",
-    message: "What is the title of the project"
+    message: "What is the title of the project",
+    default: "YourProjectName",
   },
   {
     type: "input",
     name: "description",
-    message: "Describe the project."
+    message: "Describe your project.",
+    default: "A description of the project goes here.",
   },
   {
     type: "input",
     name: "installation",
-    message: "How do you install your application? Are there dependencies?"
+    message: "How do you install your application? Are there dependencies?",
+    default: "TBD",
   },
   {
     type: "input",
     name: "usage",
-    message: "How do you use your application?"
+    message: "How do you use your application?",
+    default: "To use, '${responses.projectTitle}' you need to do . . . ",
   },
   {
     type: "list",
@@ -46,25 +50,7 @@ function promptUser() {
       "MPL",
       "GNU",
       "EPL",
-
-
     ],
-    validate: function (input) {
-        // Declare function as asynchronous, and save the done callback
-        var done = this.async();
-     
-        // Do async stuff
-        setTimeout(function() {
-          if (typeof input !== 'number') {
-            // Pass the return value in the done callback
-            done('You need to provide a number');
-            return;
-          }
-          // Pass the return value in the done callback
-          done(null, true);
-        }, 3000);
-      }
-    
   },
   {
     type: "input",
@@ -74,7 +60,8 @@ function promptUser() {
   {
     type: "input",
     name: "tests",
-    message: "List methods for testing the application."
+    message: "List methods for testing the application.",
+    default: "npm run tests",
   },       
   {
     type: "input",
@@ -84,7 +71,8 @@ function promptUser() {
   {
     type: "input",
     name: "email",
-    message: "What is your email address?"
+    message: "What is your email address?",
+    default: "someone@a-domain.com"
   }
 ])
 

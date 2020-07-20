@@ -34,7 +34,7 @@ function promptUser() {
     type: "input",
     name: "usage",
     message: "How do you use your application?",
-    default: "To use, '${responses.projectTitle}' you need to do . . . ",
+    default: "To use, (the project title here) you need to do . . .",
   },
   {
     type: "list",

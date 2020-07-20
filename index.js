@@ -39,11 +39,32 @@ function promptUser() {
     default: "MIT",
     choices: [
       "MIT",
+      "Apache 2.0",
       "BSD",
       "ISC",
       "LGPL",
-      "MPL"
-    ]
+      "MPL",
+      "GNU",
+      "EPL",
+
+
+    ],
+    validate: function (input) {
+        // Declare function as asynchronous, and save the done callback
+        var done = this.async();
+     
+        // Do async stuff
+        setTimeout(function() {
+          if (typeof input !== 'number') {
+            // Pass the return value in the done callback
+            done('You need to provide a number');
+            return;
+          }
+          // Pass the return value in the done callback
+          done(null, true);
+        }, 3000);
+      }
+    
   },
   {
     type: "input",
@@ -58,7 +79,12 @@ function promptUser() {
   {
     type: "input",
     name: "questions",
-    message: "Who should users contact if they have questions?"
+    message: "What is your github username?"
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email address?"
   }
 ])
 
@@ -68,7 +94,7 @@ function promptUser() {
 })
 .then(function() {
   // create a terminal link
-  const link = terminalLink('Successfully created your readme file. To report bugs visit->', 'https://github.com/Unbukn/README_MAKER');
+  const link = terminalLink('Successfully created your readme file. To report bugs with this app visit->', 'https://github.com/Unbukn/README_MAKER');
 
   console.log("" + link);
 })
@@ -97,13 +123,13 @@ function generateReadme(responses) {
   ## Usage
   ${responses.usage}  
   ## License
-  ${responses.license}  
+  [![License ${responses.license}](https://img.shields.io/badge/License-${responses.license}-brightgreen.svg)](https://shields.io/)
   ## Contributing
   ${responses.contributing}   
   ## Tests
   ${responses.tests}
   ## Questions
-  Questions regarding this application should be sent via email to, ${responses.questions}`;
+  Questions regarding this application should be sent via email to, ${responses.email}. You can also contact me on github with additional questions -> https://github.com/Unbukn${responses.questions}`;
 }
 
 promptUser()

@@ -61,17 +61,17 @@ Information entered is displayed under the ```License``` heading of the markdown
 Information entered is displayed under the ```Contributing``` heading of the markdown. There is no default for this prompt.
 
 ```console
-? Select a license type. 
+? List methods for testing the application.. 
 ```
 Information entered is displayed under the ```Tests``` heading of the markdown. Note: if no entry is made ```npm run tests``` will be saved as a placeholder.
 
 ```console
-? Select a license type. 
+? What is your github username? 
 ```
 Information entered is displayed under the ```Questions``` heading of the markdown. There is no default for this prompt.
 
 ```console
-? Select a license type. 
+? What is your email address?. 
 ```
 Information entered is displayed under the ```Questions``` heading of the markdown. Note: if no entry is made ```someone@a-domain.com``` will be saved as a placeholder.
 

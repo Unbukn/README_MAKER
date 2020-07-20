@@ -1,0 +1,30 @@
+{
+  "name": "readme_maker",
+  "version": "1.0.0",
+  "description": "Creates a professional README.md containing the Title, Description, Table of Contents, Installation, Usage, License, Contributers, Test Cases, and Questions related to the project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "n/a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unbukn/README_MAKER.git"
+  },
+  "keywords": [
+    "read",
+    "me",
+    "readme",
+    "create",
+    "automate",
+    "mark",
+    "down",
+    "markdown",
+    ".md"
+  ],
+  "author": "James Hudgins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Unbukn/README_MAKER/issues"
+  },
+  "homepage": "https://github.com/Unbukn/README_MAKER#readme"
+}
